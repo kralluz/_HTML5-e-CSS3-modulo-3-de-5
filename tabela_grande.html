@@ -7,17 +7,29 @@
     <title>Tabela grande</title>
     <style>
         body {
-            font-family: Arial, Helvetica, sans-serif
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #e4e4e4
         }
 
         table {
-            width: 500px;
+            width: 1000px;
             border-collapse: collapse;
+            position: relative;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+            border-top-left-radius:20px ;
+            border-top-right-radius:20px ;
         }
 
         td, th {
             border: 1px solid black;
             padding: 10px;
+
         }
 
         thead {
@@ -25,13 +37,43 @@
             color: white;
         }
 
+        thead > tr > th {
+            position: sticky;
+            top: 0;
+            background-color: #3c3c3c;
+            color: white;
+        }
+
         .num {
-            background-color: lightgray;
             text-align: center;
         }
 
+        .estado {
+            text-align: left;
+        }
 
+        .pop2010 {
+            text-align: center;
+        }
+
+        .pop2022 {
+            text-align: end;
+        }
+
+        tbody > tr:nth-child(odd) {
+            background-color: #9ea0a6;
+        }
+
+        tbody > tr:nth-child(even) {
+            background-color: white;
+            font-weight: bold;
+        }
+
+        .percent {
+            text-align: center;
+        }
         
+
     </style>
 </head>
 <body>
@@ -39,13 +81,13 @@
     <h2>Origem: Wikipédia, a enciclopédia livre.</h2>
     <p>Esta é uma lista da população das unidades federativas brasileiras segundo estimativas de 25 de dezembro de 2022, com base nos dados da prévia do censo de 2022 do Instituto Brasileiro de Geografia e Estatística (IBGE).</p>
     <table>
+        <caption>População das unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Posição</th>
-                <th>Estado</th>
-                <th>População de 2010</th>
-                <th>População atual 2022</th>
-                <th>porcentagem da pop. Total</th>
+                <th scope="col">Posição</th>
+                <th scope="col">Estado</th>
+                <th colspan="2" scope="col">População de 2010 E DE 2020</th>
+                <th scope="col">porcentagem da pop. Total</th>
             </tr>
         </thead>
 
@@ -58,7 +100,7 @@
                 <td class="pop2022">46 024 937</td>
                 <td class="percent">22,2%</td>         
             </tr>                                                                     
-            <tr>
+            <tr class="pares">
                 <td class="num">2</td>
                 <td class="estado">Minas Gerais</td>
                 <td class="pop2010">19 597 330</td>
@@ -73,7 +115,7 @@
                 <td class="pop2022">16 615 526</td>
                 <td class="percent">8,0%</td>
             </tr>                                                              
-            <tr>
+            <tr class="pares">
                 <td class="num">4</td>
                 <td class="estado">Bahia Bahia</td>
                 <td class="pop2010">14 016 906</td>
@@ -89,7 +131,7 @@
                 <td class="percent">5,7%</td>
                 
             </tr>                                                
-            <tr>
+            <tr class="pares">
                 <td class="num">6</td>
                 <td class="estado">Rio Grande do Sul</td>
                 <td class="pop2010">10 693 929</td>
@@ -104,7 +146,7 @@
                 <td class="pop2022">9 051 113</td>
                 <td class="percent">4,4%</td>                
             </tr>                                                
-            <tr>
+            <tr class="pares">
                 <td class="num">8</td>
                 <td class="estado">Ceará</td>
                 <td class="pop2010">8 452 381</td>
@@ -118,7 +160,7 @@
                 <td class="pop2022">8 442 962</td>
                 <td class="percent">4,1%</td>
             </tr>                                               
-            <tr>
+            <tr class="pares">
                 <td class="num">10</td>
                 <td class="estado">Santa Catarina</td>
                 <td class="pop2010">6 248 436</td>
@@ -131,7 +173,7 @@
                 <td class="pop2010">6.003.788</td>   	
                 <td class="pop2022">6.950.976</td>		
                 <td class="percent">3,3%</td></tr>                                              
-            <tr>
+            <tr class="pares">
                 <td class="num">12</td> 
                 <td class="estado">Maranhão</td>	
                 <td class="pop2010">6.574.789</td>   	
@@ -143,7 +185,7 @@
                 <td class="pop2010">3.514.952</td>   	
                 <td class="pop2022">4.108.508</td>		
                 <td class="percent">1,9%</td></tr>                                                     
-            <tr>
+            <tr class="pares">
                 <td class="num">14</td> 
                 <td class="estado">Paraíba</td>	
                 <td class="pop2010">3.766.528</td>   	
@@ -155,7 +197,7 @@
                 <td class="pop2010">3.483.985</td>   	
                 <td class="pop2022">3.952.262</td>		
                 <td class="percent">1,9%</td></tr>                                                 
-            <tr>
+            <tr class="pares">
                 <td class="num">16</td> 
                 <td class="estado">Mato Grosso</td>	
                 <td class="pop2010">3.035.122</td>   	
@@ -167,7 +209,7 @@
                 <td class="pop2010">3.168.027</td>	
                 <td class="pop2022">3.303.953</td>	
                 <td class="percent">1,6%</td></tr>                                                             
-            <tr>
+            <tr class="pares">
                 <td class="num">18</td> 
                 <td class="estado">Piauí</td>	
                 <td class="pop2010">3.118.360</td>   	
@@ -179,7 +221,7 @@
                 <td class="pop2010">3.120.494</td>   	
                 <td class="pop2022">3.125.254</td>	
                 <td class="percent">1,5%</td></tr>                                                
-            <tr>
+            <tr class="pares">
                 <td class="num">20</td> 
                 <td class="estado">Distrito Federal</td>	
                 <td class="pop2010">2.923.369</td>	
@@ -191,7 +233,7 @@
                 <td class="pop2010">2.449.024</td>	
                 <td class="pop2022">2.833.742</td>		
                 <td class="percent">1,4%</td></tr>                                                         
-            <tr>
+            <tr class="pares">
                 <td class="num">22</td> 
                 <td class="estado">Sergipe</td>	
                 <td class="pop2010">2.068.017</td>   	
@@ -203,7 +245,7 @@
                 <td class="pop2010">1.562.409</td>   	
                 <td class="pop2022">1.616.379</td>	
                 <td class="percent">0,8%</td></tr>
-            <tr>
+            <tr class="pares">
                 <td class="num">24</td> 
                 <td class="estado">Tocantins</td>	
                 <td class="pop2010">1.383.445</td>   	
@@ -215,7 +257,7 @@
                 <td class="pop2010">733.559</td> 	
                 <td class="pop2022">829.780</td> 		
                 <td class="percent">0,4%</td></tr>
-            <tr>
+            <tr class="pares">
                 <td class="num">26</td> 
                 <td class="estado">Amapá</td>	
                 <td class="pop2010">669.526</td> 	
@@ -228,27 +270,8 @@
                 <td class="pop2022">634.805</td> 		
                 <td class="percent">0,3%</td></tr>
         </tbody>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <tfoot>
-            <th>total de Habitantes</th>
+            <th scope="row">total de Habitantes</th>
             <td>00000</td>
         </tfoot>
     </table>

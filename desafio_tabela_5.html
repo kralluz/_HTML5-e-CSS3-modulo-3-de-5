@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    table {
+        width: 500px;
+        border-collapse: collapse;
+    }
+
+    caption {
+        font-size: 1.3em;
+        font-weight: bolder;
+        padding:  8px;
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+    }
+
+    .destaque {
+        background-color: greenyellow;
+        font-weight: bolder; 
+    }
+
+    col.nome {
+        background-color: aquamarine;
+    }
+
+    col.sexo {
+        background-color: lightcoral;
+    }
+
+    col.idade {
+        background-color: lightgreen;
+    }
+
+    col.profissão {
+        background-color: lightseagreen;
+    }
+    </style>
+</head>
+<body>
+    <h1>Exercício de Tabela</h1>
+
+    <table>
+        <colgroup>
+            <col class="nome">
+            <col class="sexo">
+            <col class="idade">
+            <col class="profissão">
+        </colgroup>
+        <caption>Cadastro</caption>
+        <thead>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">idade</th>
+            <th scope="col">Profissão</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ana Maria</td>
+                <td>F</td>
+                <td>20</td>
+                <td>jornalista</td>
+            </tr>
+            <tr>
+                <td>José Augusto</td>
+                <td>M</td>
+                <td>21</td>
+                <td>Empresário</td>
+            </tr>
+            <tr>
+                <td>Laura</td>
+                <td>F</td>
+                <td>18</td>
+                <td>Médica</td>
+            </tr>
+            <tr class="destaque">
+                <td>Kralluz</td>
+                <td>M</td>
+                <td>21</td>
+                <td>Programador</td>
+            </tr>
+            <tr>
+                <td>Mirtes</td>
+                <td>F</td>
+                <td>65</td>
+                <td>Cozinheira</td>
+            </tr>
+            <tr class="destaque">
+                <td>Synex</td>
+                <td>M</td>
+                <td>1</td>
+                <td>Programador</td>
+            </tr>
+            <tr>
+                <td>Julia</td>
+                <td>F</td>
+                <td>19  </td>
+                <td>Empresária</td>
+            </tr>
+            <tr>
+                <td>Lorena</td>
+                <td>F</td>
+                <td>17</td>
+                <td>Veterinária</td>
+            </tr>
+            <tr>
+                <td>Matheuzin</td>
+                <td>M</td>
+                <td>14</td>
+                <td>Estudante</td>
+            </tr>
+        </tbody>
+        <tfoot></tfoot>
+    </table>
+</body>
+</html>
